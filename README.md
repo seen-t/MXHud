@@ -1,2 +1,2 @@
 # MXHud
-MXHud // Krunker CSS
+MXHud // Krunker CSS // Released in 2026 Feb 28
