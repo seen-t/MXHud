@@ -168,8 +168,10 @@
 
 
 /* Top Right */
+#notificationCenter,
+#gameAnnouncementEl,
 #chatList::-webkit-scrollbar {
-    display: none
+    display: none !important
 }
 #chatHolder {
     position: fixed;
