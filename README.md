@@ -1,2 +1,6 @@
 # MXHud
-MXHud // Krunker CSS // Released in 2026 Feb 28
+Krunker UI Theme by pipz
+
+## Relased 2026-02-28
+
+## License
