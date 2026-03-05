@@ -71,12 +71,12 @@
 #matchInfoHolder {
     position: fixed;
     left: calc(0% + 140px);
-    top: calc(0% + 100px);
+    top: calc(0% + 135px);
 }
 #menuServerInfoContainer {
     position: fixed;
     left: calc(0% + 140px);
-    top: calc(0% + 135px);
+    top: calc(0% + 100px);
     display: flex;
     flex-direction: row;
 }
