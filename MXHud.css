@@ -6,7 +6,6 @@
 
 
 /* Menu Cleanup */
-#app,
 #aHider,
 #gameNameHolder,
 #signupRewardsButton,
@@ -27,19 +26,63 @@
     border: 0;
 }
 #mapInfoHld {
+    padding-left: unset;
     font-size: 0;
+}
+#mapInfo {
+    margin: unset;
 }
 
 
 /* Menu Styling */
-.headerBar,
-#menuItemContainer,
-.button {
-    backdrop-filter: blur(5px)
+.headerBar {
+    backdrop-filter: blur(5px);
+    width: -webkit-fill-available;
+    height: 95px;
+    border-radius: 0;
 }
-#menuClassContainer,
-#subLogoButtons {
+#mLevelCont {
+    background: transparent
+}
+#menuItemContainer {
+    backdrop-filter: blur(5px);
+    top: 95px;
+}
+.button {
+    backdrop-filter: blur(5px);
+}
+#menuClassContainer {
     bottom: 20px;
+}
+#subLogoButtons {
+    z-index: 999;
+    position: fixed;
+    top: 22px;
+    right: 1%;
+    width: max-content;
+    left: unset;
+    transform: unset;
+    bottom: unset;
+}
+#subLogoButtons > .button {
+    height: 30px;
+    line-height: 2;
+}
+#matchInfoHolder {
+    position: fixed;
+    left: calc(0% + 140px);
+    top: calc(0% + 100px);
+}
+#menuServerInfoContainer {
+    position: fixed;
+    left: calc(0% + 140px);
+    top: calc(0% + 135px);
+    display: flex;
+    flex-direction: row;
+}
+.menuDebugInfo {
+    margin-left: 8px;
+    margin-bottom: 5px;
 }
 #customizeButton {
     width: 360px;
@@ -106,7 +149,7 @@
 }
 #topLeftHolder {
     position: fixed;
-    left: calc(1% + 15px);
+    left: calc(1% + 7px);
     top: calc(1% + 0px);
 }
 #topLeftData {
@@ -128,7 +171,7 @@
 }
 #leaderboardHolder {
     position: fixed;
-    left: calc(1% + 15px);
+    left: calc(1% + 7px);
     top: calc(1% + 73px);
     background: transparent;
 }
@@ -216,7 +259,7 @@
 #bottomLeftHolder {
     border-radius: 6px 6px 6px 6px;
     position: fixed;
-    left: calc(1% + 15px);
+    left: calc(1% + 7px);
     bottom: calc(1% + 25px);
 }
 #bottomLeftPlayerLeft {
@@ -274,7 +317,7 @@
 #killStreakHolder {
     position: fixed;
     transform: unset;
-    left: calc(1% + 18px);
+    left: calc(1% + 10px);
     bottom: calc(1% + 110px);
     filter: drop-shadow(0 0 0.1rem black);
 }
@@ -292,7 +335,7 @@
 }
 #teamScores {
     position: fixed;
-    left: calc(1% + 313px);
+    left: calc(1% + 305px);
     bottom: calc(1% + 25px);
     background: transparent;
     filter: drop-shadow(0 0 0.1rem black);
@@ -340,7 +383,7 @@
 }
 #weapHolder {
     position: fixed;
-    right: calc(1% + 15px);
+    right: calc(1% + 7px);
     bottom: calc(1% + 25px);
     width: 300px;
     height: 94px;
@@ -350,7 +393,7 @@
 }
 #ammoHolder {
     position: fixed;
-    right: calc(1% + 15px);
+    right: calc(1% + 7px);
     bottom: calc(1% + 25px);
     transform: unset;
     width: 300px;
@@ -381,7 +424,7 @@
 .topRightCounters {
     position: fixed;
     transform: unset;
-    right: calc(1% + 15px);
+    right: calc(1% + 7px);
     bottom: calc(1% + 100px);
     filter: drop-shadow(0 0 0.1rem black);
     display: flex;
