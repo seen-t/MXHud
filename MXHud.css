@@ -198,7 +198,7 @@
 #chatHolder {
     position: fixed;
     left: unset !important;
-    right: calc(1% + 7px);
+    right: calc(1% - 10px);
     top: calc(1% + 12px);
 }
 #chatList {
