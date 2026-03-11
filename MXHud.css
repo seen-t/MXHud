@@ -459,6 +459,9 @@
 
 
 /* End UI */
+#endUI { 
+    transform: scale(0.95) 
+}
 #endAHolderL,
 #endAHolderR,
 #matchEndSignupIncentives {
@@ -489,6 +492,38 @@
 .matchVote {
     border-color: transparent !important;
     filter: drop-shadow(0 0 0.1rem black)
+}
+
+
+/* Spectate UI */
+#uiBase.onSpect .topRightCounters {
+    display: none !important
+}
+#uiBase.onSpect #leaderboardHolder {
+    position: fixed;
+    left: calc(1% + 7px);
+    top: calc(1% + 83px);
+}
+#specTimer {
+    background: linear-gradient(to top, transparent, rgba(0 0 0 / 80%));
+    border: 0;
+    border-top: 6px solid goldenrod;
+    border-radius: 0;
+    backdrop-filter: blur(5px)
+}
+#specNames.topLeftOld {
+    margin-left: 7px;
+    border-left: 6px solid goldenrod;
+    border-radius: 0;
+    background: linear-gradient(to right, rgba(0 0 0 / 80%), transparent);
+    backdrop-filter: blur(5px)
+}
+#specControlHolder {
+    border-radius: 0;
+    border-right: 6px solid goldenrod;
+    text-shadow: unset !important;
+    background: linear-gradient(to right, transparent, rgba(0 0 0 / 80%)) !important;
+    backdrop-filter: blur(5px);
 }
 
 
