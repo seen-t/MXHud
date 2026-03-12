@@ -109,33 +109,40 @@
     content: "Server";
     font-size: 20.5px;
 }
+#uiBase.onMenu #specTimer {
+    background: rgba(0 0 0 / 50%) !important;
+    border: 0;
+    border-radius: 0;
+    backdrop-filter: blur(5px)
+}
 
 
 /* Menu Chat */
 #uiBase.onMenu #chatHolder {
     right: unset !important;
     left: 150px !important;
-    top: unset;
+    top: unset !important;
+    bottom: 20px; !important
 }
 #uiBase.onMenu #chatList {
-    text-align: left;
+    text-align: left !important;
 }
 #uiBase.onMenu .chatItem {
-    padding-left: 15px;
-    padding-right: 5px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-left: 6px solid goldenrod;
-    border-right: 0;
+    padding-left: 15px !important;
+    padding-right: 5px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    border-left: 6px solid goldenrod !important;
+    border-right: 0 !important;
     background: linear-gradient(to left, transparent, rgba(0 0 0 / 80%)) !important;
 }
 #uiBase.onMenu #chatInput {
-    transform: scale(1);
-    position: unset;
-    text-align: left;
-    border: 0;
-    border-left: 6px solid cyan;
-    margin-left: 8px;
+    transform: scale(1) !important;
+    position: unset !important;
+    text-align: left !important;
+    border: 0 !important;
+    border-left: 6px solid cyan !important;
+    margin-left: 8px !important;
     background: linear-gradient(to left, transparent, rgba(0 0 0 / 80%)) !important;
 }
 
@@ -368,7 +375,8 @@
     background: transparent
 }
 .weapItem {
-    transition: all .3s;
+	transform: scale(0);
+    transition: all .25s;
     opacity: 0 !important;
     position: fixed;
     right: calc(1% + 155px);
@@ -376,6 +384,7 @@
     background: transparent;
 }
 .weapItem[style="opacity: 1;"] {
+	transform: scale(1);
     opacity: 1 !important
 }
 .weapIcon {
@@ -527,6 +536,126 @@
 }
 
 
+/* Comp Menu */
+#compTScrsB,
+#cmpDatBox,
+.cmpTmHed,
+.compClassPItm[onclick*="4"],
+.compClassPItm[onclick*="15"],
+.compPlWepsL,
+.compPlWepsR {
+    display: none !important
+}
+#compBtnLst {
+    padding: unset;
+    z-index: 999;
+    position: fixed;
+    transform: unset;
+    right: 5px;
+    top: 25px;
+    bottom: unset;
+    width: max-content;
+    background: transparent;
+}
+.compMenBtnS {
+    border: 3px solid white;
+    background: rgba(0 0 0 / 50%) !important;
+    margin-top: unset;
+    backdrop-filter: blur(5px);
+}
+.compMenBtnS span {
+    margin-bottom: 17px !important;
+}
+.compClassPCnt {
+    font-size: 16px
+}
+#compClassPHolder {
+    height: 80px;
+    backdrop-filter: blur(5px)
+}
+#compClassHold {
+    position: absolute;
+    left: 5px;
+    top: 25px;
+}
+.compClassPItm {
+    border: 3px solid white;
+    background: rgba(0 0 0 / 50%);
+    backdrop-filter: blur(5px);
+    width: 66px;
+    height: 66px;
+}
+.cmpClassLck {
+    width: auto;
+    height: auto;
+    top: 10px;
+    margin-left: 14px;
+}
+.cmpClassLck span {
+    font-size: 56px !important
+}
+#compPlListL,
+#compPlListR {
+    transform: unset;
+}
+#compPlListL {
+    position: fixed;
+    left: 0;
+    top: 100px;
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+}
+.compPLstSt {
+    margin: unset;
+    width: max-content;
+    max-width: 107px;
+}
+#compPlListR {
+    position: fixed;
+    right: 0;
+    left: unset !important;
+    top: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: max-content;
+}
+.compPLstSt {
+    font-size: 15px
+}
+.compPLstIcn {
+    width: 67px;
+    height: 67px;
+}
+.compPLstIcn,
+.compSwpTmB {
+    background: rgba(0 0 0 / 50%) !important;
+    backdrop-filter: blur(5px);
+}
+.compSwpTmB[style="background-color:#eb4034"] {
+    margin-top: unset;
+    padding-bottom: unset;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    line-height: 2;
+    width: 130px;
+    height: 40px;
+    font-size: 16px
+}
+.compSwpTmB[style="background-color:#3489eb"] {
+    margin-top: unset;
+    padding-bottom: unset;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    line-height: 2;
+    width: 130px;
+    height: 40px;
+    font-size: 16px
+}
+
+          
 /* Grey Inners */
 .greyInner,
 .greyInlineInner,
@@ -537,7 +666,7 @@
   display: none;
 }
 
-
+    
 /* Watermark */
 #termsInfo {
     position: fixed;
