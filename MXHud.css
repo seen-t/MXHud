@@ -1,7 +1,7 @@
 /* Forced Chat & Spectate on */
 #chatUIHolder,
 #spectButtonHolder {
-    display: block !important
+    display: block !important;
 }
 
 
@@ -16,11 +16,16 @@
 #topRightAdHolder,
 #termsInfo span,
 #menuClassContainerInner,
-.menuItem[onclick*="community"] {
-    display: none !important
+.menuItemRankedLabel,
+.bpItem,
+#dailySpinDiv,
+#updateAd,
+.sidebarDivider,
+.shop-badge {
+    display: none !important;
 }
 .verticalSeparator {
-    visibility: hidden
+    visibility: hidden;
 }
 #matchInfoHolder {
     border: 0;
@@ -35,18 +40,22 @@
 
 
 /* Menu Styling */
-.headerBar {
+#playerHeaderEl {
+    background: rgba(0 0 0 / 50%) !important;
     backdrop-filter: blur(5px);
-    width: -webkit-fill-available;
-    height: 95px;
-    border-radius: 0;
-}
-#mLevelCont {
-    background: transparent
 }
 #menuItemContainer {
-    backdrop-filter: blur(5px);
-    top: 95px;
+    top: 85px !important;
+}
+.menuItem {
+    padding: unset !important;
+}
+.menuItem span {
+    transform: scale(1.5);
+    margin-bottom: 5px;
+}
+.menuItemTitle {
+    font-size: 15px !important;
 }
 .button {
     backdrop-filter: blur(5px);
@@ -54,52 +63,18 @@
 #menuClassContainer {
     bottom: 20px;
 }
-#subLogoButtons {
-    z-index: 999;
-    position: fixed;
-    top: 22px;
-    right: 1%;
-    width: max-content;
-    left: unset;
-    transform: unset;
-    bottom: unset;
-}
 #subLogoButtons > .button {
     height: 30px;
-    line-height: 2;
+    line-height: 1.75;
 }
-#matchInfoHolder {
-    position: fixed;
-    left: calc(0% + 140px);
-    top: calc(0% + 135px) !important;
-}
-#menuServerInfoContainer {
-    position: fixed;
-    left: calc(0% + 140px);
-    top: calc(0% + 100px) !important;
-    display: flex;
-    flex-direction: row;
-}
-.menuDebugInfo {
-    margin-left: 8px;
-    margin-bottom: 5px;
-}
+
 #customizeButton {
     width: 360px;
 }
-#menuBtnQuickMatch,
+#menuBtnCustomGames,
 #menuBtnHost,
 #menuBtnBrowser {
     font-size: 0 !important;
-}
-/*
-#menuBtnQuickMatch {
-    display: none
-}
-*/
-#menuBtnQuickMatch:before {
-    content: "Q-Game";
-    font-size: 20.5px
 }
 #menuBtnHost:before {
     content: "Host";
@@ -109,20 +84,23 @@
     content: "Server";
     font-size: 20.5px;
 }
+#menuBtnCustomGames:before {
+    content: "Custom";
+    font-size: 20.5px;
+}
 #uiBase.onMenu #specTimer {
     background: rgba(0 0 0 / 50%) !important;
     border: 0;
     border-radius: 0;
-    backdrop-filter: blur(5px)
+    backdrop-filter: blur(5px);
 }
 
 
 /* Menu Chat */
 #uiBase.onMenu #chatHolder {
     right: unset !important;
-    left: 150px !important;
     top: unset !important;
-    bottom: 20px; !important
+    bottom: 20px; !important;
 }
 #uiBase.onMenu #chatList {
     text-align: left !important;
@@ -152,7 +130,7 @@
 #matchInfo.topLeftOld,
 #timerIcon,
 .leaderCounter {
-    display: none !important
+    display: none !important;
 }
 #topLeftHolder {
     position: fixed;
@@ -165,7 +143,7 @@
     margin-top: 15px;
 }
 #pingDisplay, #fpsDisplay {
-    color: white
+    color: white;
 }
 #timerHolder.topLeftOld {
     background: transparent;
@@ -174,7 +152,7 @@
     background: transparent;
 }
 #timerVal {
-    filter: drop-shadow(0 0 0.1rem black)
+    filter: drop-shadow(0 0 0.1rem black);
 }
 #leaderboardHolder {
     position: fixed;
@@ -186,13 +164,13 @@
     border-left: 6px solid goldenrod;
     border-radius: 0;
     background: linear-gradient(to right, rgba(0 0 0 / 80%), transparent);
-    backdrop-filter: blur(5px)
+    backdrop-filter: blur(5px);
 }
 
 
 /* Top Mid */
 #topMidHold {
-    filter: drop-shadow(0 0 0.1rem black)
+    filter: drop-shadow(0 0 0.1rem black);
 }
 
 
@@ -200,7 +178,7 @@
 #notificationCenter,
 #gameAnnouncementEl,
 #chatList::-webkit-scrollbar {
-    display: none !important
+    display: none !important;
 }
 #chatHolder {
     position: fixed;
@@ -245,7 +223,7 @@
 }
 #chatInput:focus {
     padding: 8px 16px;
-    transform: scale(1)
+    transform: scale(1);
 }
 .weaponChatIcon,
 .meleeChatIcon,
@@ -261,7 +239,7 @@
 #bottomLeftPlayerLeft,
 #bottomLeftTeamHolder,
 #bottomLeftChallIcon {
-    display: none !important
+    display: none !important;
 }
 #bottomLeftHolder {
     border-radius: 6px 6px 6px 6px;
@@ -270,7 +248,7 @@
     bottom: calc(1% + 25px);
 }
 #bottomLeftPlayerLeft {
-    background: transparent
+    background: transparent;
 }
 #bottomLeftPlayer {
     border-radius: 0;
@@ -301,7 +279,7 @@
     position: absolute;
     left: 65px;
     bottom: 20px;
-    font-size: 32px
+    font-size: 32px;
 }
 #bottomLeftHealth:before {
     content: "";
@@ -333,7 +311,7 @@
     border: 0;
 }
 .killStreakItemInner {
-    background: transparent
+    background: transparent;
 }
 .killStreakCnt {
     position: absolute;
@@ -359,7 +337,7 @@
     border: 0;
     border-bottom: 6px solid white;
     border-radius: 0;
-    backdrop-filter: blur(5px)
+    backdrop-filter: blur(5px);
 }
 
 
@@ -369,10 +347,10 @@
 .weapStreakHolder,
 #ammoMax,
 #ammoIcon {
-    display: none !important
+    display: none !important;
 }
 .weapItemInner {
-    background: transparent
+    background: transparent;
 }
 .weapItem {
 	transform: scale(0);
@@ -385,10 +363,10 @@
 }
 .weapItem[style="opacity: 1;"] {
 	transform: scale(1);
-    opacity: 1 !important
+    opacity: 1 !important;
 }
 .weapIcon {
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
 #weapHolder {
     position: fixed;
@@ -447,7 +425,7 @@
 /* Center */
 .centerLeaderContainer,
 .newLeaderTeam {
-    background: transparent
+    background: transparent;
 }
 .centerLeaderContainerInner {
     border: 0;
@@ -463,18 +441,18 @@
 .death-ui-bottom,
 .death-ui-bottom-empty {
     background: radial-gradient(ellipse at center, transparent, black);
-    backdrop-filter: blur(5px) !important
+    backdrop-filter: blur(5px) !important;
 }
 
 
 /* End UI */
 #endUI { 
-    transform: scale(0.95) 
+    transform: scale(0.95);
 }
 #endAHolderL,
 #endAHolderR,
 #matchEndSignupIncentives {
-    display: none !important
+    display: none !important;
 }
 .endCard {
     background: radial-gradient(ellipse at center, transparent, black);
@@ -483,7 +461,7 @@
 #doubleXPButton{
     background: radial-gradient(ellipse at center, transparent, black);
     backdrop-filter: blur(5px);
-    transition: .4s
+    transition: 0.4s;
 }
 #doubleXPButton:hover {
     background-color: rgba(0, 0, 0, 0.75);
@@ -500,13 +478,13 @@
 .teamTotals,
 .matchVote {
     border-color: transparent !important;
-    filter: drop-shadow(0 0 0.1rem black)
+    filter: drop-shadow(0 0 0.1rem black);
 }
 
 
 /* Spectate UI */
 #uiBase.onSpect .topRightCounters {
-    display: none !important
+    display: none !important;
 }
 #uiBase.onSpect #leaderboardHolder {
     position: fixed;
@@ -518,14 +496,14 @@
     border: 0;
     border-top: 6px solid goldenrod;
     border-radius: 0;
-    backdrop-filter: blur(5px)
+    backdrop-filter: blur(5px);
 }
 #specNames.topLeftOld {
     margin-left: 7px;
     border-left: 6px solid goldenrod;
     border-radius: 0;
     background: linear-gradient(to right, rgba(0 0 0 / 80%), transparent);
-    backdrop-filter: blur(5px)
+    backdrop-filter: blur(5px);
 }
 #specControlHolder {
     border-radius: 0;
@@ -544,7 +522,7 @@
 .compClassPItm[onclick*="15"],
 .compPlWepsL,
 .compPlWepsR {
-    display: none !important
+    display: none !important;
 }
 #compBtnLst {
     padding: unset;
@@ -567,7 +545,7 @@
     margin-bottom: 17px !important;
 }
 .compClassPCnt {
-    font-size: 16px
+    font-size: 16px;
 }
 #compClassPHolder {
     height: 80px;
@@ -592,7 +570,7 @@
     margin-left: 14px;
 }
 .cmpClassLck span {
-    font-size: 56px !important
+    font-size: 56px !important;
 }
 #compPlListL,
 #compPlListR {
@@ -621,7 +599,7 @@
     width: max-content;
 }
 .compPLstSt {
-    font-size: 15px
+    font-size: 15px;
 }
 .compPLstIcn {
     width: 67px;
@@ -641,7 +619,7 @@
     line-height: 2;
     width: 130px;
     height: 40px;
-    font-size: 16px
+    font-size: 16px;
 }
 .compSwpTmB[style="background-color:#3489eb"] {
     margin-top: unset;
@@ -652,7 +630,7 @@
     line-height: 2;
     width: 130px;
     height: 40px;
-    font-size: 16px
+    font-size: 16px;
 }
 
           
@@ -683,5 +661,5 @@
     content: "MXHud by pipz";
     font-size: 12px;
     color: rgba(255 255 255 / 50%);
-    filter: drop-shadow(0 0 0.1rem black)
+    filter: drop-shadow(0 0 0.1rem black);
 }
