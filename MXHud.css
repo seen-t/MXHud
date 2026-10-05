@@ -21,7 +21,8 @@
 #dailySpinDiv,
 #updateAd,
 .sidebarDivider,
-.shop-badge {
+.shop-badge,
+.ph-tooltip {
     display: none !important;
 }
 .verticalSeparator {
@@ -71,6 +72,7 @@
 #customizeButton {
     width: 360px;
 }
+/* thanks to new UI adjust update
 #menuBtnCustomGames,
 #menuBtnHost,
 #menuBtnBrowser {
@@ -94,7 +96,7 @@
     border-radius: 0;
     backdrop-filter: blur(5px);
 }
-
+*/
 
 /* Menu Chat */
 #uiBase.onMenu #chatHolder {
@@ -662,4 +664,24 @@
     font-size: 12px;
     color: rgba(255 255 255 / 50%);
     filter: drop-shadow(0 0 0.1rem black);
+}
+
+
+/* Season 10 hotfix */
+.popRail {
+    visibility: hidden;
+}
+#instructions {
+    top: 50%;
+}
+#uiBase.onMenu #spectButton {
+    top: 42%;
+}
+#matchInfoHolder {
+    top: 80px;
+    right: 0;
+    left: unset;
+    bottom: unset;
+    transform: unset;
+    padding: unset;
 }
